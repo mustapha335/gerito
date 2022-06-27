@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className='app__navbar'>
       <div className='app__navbar--header'>
-        <h1 className='app__navbar--heading'>Gerito</h1>
+        <h1 className='app__navbar--heading'>Midnight.</h1>
       </div>
       <ul className='app__navbar-links'>
         <li className='p__opensans'>
@@ -34,7 +34,7 @@ const Navbar = () => {
         </a>
         <div />
         <a href='/' className='p__opensans'>
-          Book Table
+          Book A Table
         </a>
       </div>
       <div className='app__navbar-smallscreen'>
