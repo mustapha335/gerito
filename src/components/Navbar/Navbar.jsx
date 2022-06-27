@@ -1,80 +1,77 @@
-import React, { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { MdOutlineRestaurantMenu } from 'react-icons/md'
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineRestaurantMenu } from "react-icons/md";
 
-import images from '../../constants/images'
-
-import './Navbar.css'
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className="app__navbar">
-      <div className="app__navbar--header">
-        {/* <img src={images.gericht} alt="" /> */}
-        <h1 className="app__navbar--heading">Gerito</h1>
+    <div className='app__navbar'>
+      <div className='app__navbar--header'>
+        <h1 className='app__navbar--heading'>Gerito</h1>
       </div>
-      <ul className="app__navbar-links">
-        <li className="p__opensans">
-          <a href="#home">Home</a>
+      <ul className='app__navbar-links'>
+        <li className='p__opensans'>
+          <a href='#home'>Home</a>
         </li>
-        <li className="p__opensans">
-          <a href="#about"> About</a>
+        <li className='p__opensans'>
+          <a href='#about'> About</a>
         </li>
-        <li className="p__opensans">
-          <a href="#menu">Menu</a>
+        <li className='p__opensans'>
+          <a href='#menu'>Menu</a>
         </li>
-        <li className="p__opensans">
-          <a href="#awards">Awards</a>
+        <li className='p__opensans'>
+          <a href='#awards'>Awards</a>
         </li>
-        <li className="p__opensans">
-          <a href="#contact">Contact</a>
+        <li className='p__opensans'>
+          <a href='#contact'>Contact</a>
         </li>
       </ul>
-      <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">
+      <div className='app__navbar-login'>
+        <a href='#login' className='p__opensans'>
           Log In / Register
         </a>
         <div />
-        <a href="/" className="p__opensans">
+        <a href='/' className='p__opensans'>
           Book Table
         </a>
       </div>
-      <div className="app__navbar-smallscreen">
+      <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu
-          color="#fff"
+          color='#fff'
           fontSize={27}
           onClick={() => setToggleMenu(true)}
-          className="app__navbar-menu"
+          className='app__navbar-menu'
         />
         {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+          <div className='app__navbar-smallscreen_overlay flex__center slide-bottom'>
             <MdOutlineRestaurantMenu
               fontSize={27}
-              className="overlay__close"
+              className='overlay__close'
               onClick={() => setToggleMenu(false)}
             />
-            <ul className="app__navbar-smallscreen_links">
-              <li className="p__opensans">
-                <a href="#home">Home</a>
+            <ul className='app__navbar-smallscreen_links'>
+              <li className='p__opensans'>
+                <a href='#home'>Home</a>
               </li>
-              <li className="p__opensans">
-                <a href="#about"> About</a>
+              <li className='p__opensans'>
+                <a href='#about'> About</a>
               </li>
-              <li className="p__opensans">
-                <a href="#menu">Menu</a>
+              <li className='p__opensans'>
+                <a href='#menu'>Menu</a>
               </li>
-              <li className="p__opensans">
-                <a href="#awards">Awards</a>
+              <li className='p__opensans'>
+                <a href='#awards'>Awards</a>
               </li>
-              <li className="p__opensans">
-                <a href="#contact">Contact</a>
+              <li className='p__opensans'>
+                <a href='#contact'>Contact</a>
               </li>
             </ul>
           </div>
         )}
       </div>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
